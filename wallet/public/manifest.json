@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Minimal Solana Wallet",
+  "version": "0.4.0",
+  "description": "A local-only Solana development wallet.",
+  "minimum_chrome_version": "114",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApzQMmhIqqnrkMGs4lCIjzzlVN0+VLov0DKacjODr4FdInnG2V7YlMViTedj1jgDOMQxMgbwdxU4gMHfRsteWvYo4HO9a/WNVBEa4s0IEab+aXkQ8tpiMzI3VRZTRI7iGStT/dDLkKZhLUYLLu7n5FdziVOHExNl4O91NqIhP3S0j4nbIdyXTviwI076QFdZ7SSLq3cx7TrlEj0I6F2CJ6QQj4cwZQkQD38t6SFuQ14g1afE7cSOGez37qBeWt5tgUtA5EzsTiIxfP9O/X6w8pVHZWp/jpTQVW9T7vTnxJrfBb/V+z5M0cCMJxII5vWyJpDmx+F9S3nJwEQRkYj8BjwIDAQAB",
+  "action": {
+    "default_title": "Minimal Solana Wallet"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "background": {
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "permissions": ["sidePanel", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["assets/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/wallet.js", "assets/*.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+}

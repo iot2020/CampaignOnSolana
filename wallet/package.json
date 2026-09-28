@@ -1,0 +1,24 @@
+{
+  "name": "minimal-solana-wallet",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --host 127.0.0.1",
+    "test": "node scripts/test-tx.mjs && node scripts/test-keys.mjs && node scripts/test-build.mjs"
+  },
+  "dependencies": {
+    "@solana/wallet-standard": "^1.1.4",
+    "@wallet-standard/app": "^1.1.0",
+    "@wallet-standard/core": "^1.1.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "bs58": "^6.0.0",
+    "tweetnacl": "^1.0.3",
+    "vite": "^7.1.7",
+    "web3": "npm:@solana/web3.js@^1.98.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {}
+}

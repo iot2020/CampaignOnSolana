@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Minimal Solana Wallet</title>
+  <!-- 这个文件在 public/ 里，vite 只是原样复制、不会自动注入资源，
+       所以 CSS 必须手写一行 <link>：popup.jsx 里 import 的 ./popup.css 会被
+       打包成 assets/popup.css（文件名由 vite.config.js 的 assetFileNames 固定住，
+       没有 hash）。漏掉这行的话界面能渲染出来，但完全没有样式。
+       scripts/test-build.mjs 会在 npm test 时检查这一行还在不在。 -->
+  <link rel="stylesheet" href="/assets/popup.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/assets/popup.js"></script>
+</body>
+</html>
