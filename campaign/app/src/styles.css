@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap');
+
+:root {
+    color: #e7eadf;
+    background: #101612;
+    font-family: 'Manrope', sans-serif;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: radial-gradient(circle at 78% 18%, #274936 0, transparent 28%), #101612;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.shell {
+    width: min(1160px, calc(100% - 48px));
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 28px 0 24px;
+}
+
+.topbar,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #38513e;
+    padding-bottom: 22px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+.mark {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    background: #d8f36a;
+    color: #122016;
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+.wallet-button,
+.secondary-button {
+    border: 1px solid #71866b;
+    color: #e7eadf;
+    background: transparent;
+    padding: 11px 17px;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+.wallet-button:hover,
+.secondary-button:hover {
+    border-color: #d8f36a;
+    color: #d8f36a;
+}
+
+.intro {
+    padding: 82px 0 60px;
+    max-width: 730px;
+}
+
+.eyebrow,
+label,
+small,
+footer {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    color: #d8f36a;
+    margin: 0 0 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #f1f2e8;
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: .98;
+    letter-spacing: -.06em;
+}
+
+h1 em {
+    color: #9db2a0;
+    font-style: normal;
+}
+
+.lede {
+    max-width: 490px;
+    color: #aab7a8;
+    line-height: 1.7;
+    margin: 28px 0 0;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 14px;
+}
+
+.panel {
+    border: 1px solid #38513e;
+    min-height: 310px;
+    padding: 24px;
+    background: rgba(17, 27, 20, .72);
+}
+
+.panel-heading {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    border-bottom: 1px solid #2d4434;
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+}
+
+.panel-heading span {
+    color: #d8f36a;
+    font: 11px 'DM Mono', monospace;
+}
+
+h2 {
+    margin: 0;
+    font-size: 17px;
+    letter-spacing: -.02em;
+}
+
+label {
+    display: block;
+    color: #8fa291;
+    margin-bottom: 10px;
+}
+
+label small {
+    color: #536a58;
+    margin-left: 5px;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #425b47;
+    outline: none;
+    background: #16231a;
+    color: #e7eadf;
+    padding: 13px;
+    border-radius: 1px;
+}
+
+input:focus {
+    border-color: #d8f36a;
+}
+
+.secondary-button {
+    margin-top: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.network {
+    margin-top: 33px;
+    color: #718671;
+    font: 11px 'DM Mono', monospace;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.online-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #d8f36a;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.campaign-name {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -.04em;
+}
+
+.description,
+.empty-state {
+    color: #9cac9d;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.stats {
+    display: flex;
+    gap: 36px;
+    margin-top: 31px;
+}
+
+.stats small {
+    color: #718671;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stats strong {
+    font-size: 23px;
+}
+
+.stats i {
+    color: #d8f36a;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.progress {
+    height: 5px;
+    background: #2b4031;
+    margin-top: 24px;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: #d8f36a;
+}
+
+.address {
+    color: #657867;
+    font: 10px 'DM Mono', monospace;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 16px;
+}
+
+.empty-state {
+    margin-top: 60px;
+    border-left: 2px solid #d8f36a;
+    padding-left: 13px;
+}
+
+.amount-input {
+    position: relative;
+}
+
+.amount-input input {
+    padding-right: 38px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.amount-input span {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    color: #d8f36a;
+}
+
+.primary-button {
+    width: 100%;
+    border: 0;
+    background: #d8f36a;
+    color: #152119;
+    padding: 14px 16px;
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+}
+
+.primary-button:hover {
+    background: #efffa8;
+}
+
+.primary-button:disabled {
+    opacity: .55;
+    cursor: wait;
+}
+
+.status {
+    color: #aab7a8;
+    font-size: 12px;
+    line-height: 1.5;
+    min-height: 36px;
+}
+
+footer {
+    border-top: 1px solid #38513e;
+    border-bottom: 0;
+    margin-top: 72px;
+    padding-top: 20px;
+    color: #637766;
+    gap: 20px;
+}
+
+footer b {
+    color: #9cac9d;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+footer span {
+    color: #d8f36a;
+    margin-left: auto;
+}
+
+@media (max-width: 850px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        min-height: auto;
+    }
+
+    .intro {
+        padding: 58px 0 42px;
+    }
+}
+
+@media (max-width: 520px) {
+    .shell {
+        width: min(100% - 28px, 1160px);
+    }
+
+    .topbar {
+        padding-bottom: 16px;
+    }
+
+    .wallet-button {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    footer {
+        display: block;
+        line-height: 2;
+    }
+
+    footer span {
+        float: right;
+    }
+}
